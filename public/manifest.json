@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Number to Whatsapp",
+  "name": "An Utility for send message to whatsapp without saving number",
   "icons": [
     {
       "src": "favicon.ico",
