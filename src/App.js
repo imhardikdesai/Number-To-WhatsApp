@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import Form from './Components/Form/Form';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className="container my-5 d-flex justify-content-center">
         <Form />
       </div>
+      <Footer />
     </div>
   );
 }
