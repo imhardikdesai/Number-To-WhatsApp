@@ -10,11 +10,10 @@ export default function Form() {
         <div className="formData">
             <TextField
                 style={{ marginBottom: 20 }}
-                inputProps={{ style: { color: "white" } }}
                 required
                 id="outlined-number"
                 label="Phone Number"
-                type="tel"
+                type="number"
                 placeholder="Enter your phone number"
                 InputLabelProps={{
                     shrink: true,
@@ -22,7 +21,7 @@ export default function Form() {
                 onChange={(e) => {
                     setNumber(e.target.value);
                 }}
-
+                
             />
             <a className="anchor" href={number ? `http://wa.me/+91${number}` : "/#"} target="_self" rel="noopener noreferrer">
                 <Button variant="contained" color="success">Send Message</Button>
