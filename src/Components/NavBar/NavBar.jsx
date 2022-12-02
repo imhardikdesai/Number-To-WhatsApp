@@ -7,7 +7,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 export default function NavBar() {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" style={{ backgroundColor: '#25D366' }}>
                 <Toolbar style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <WhatsAppIcon sx={{ display: { md: 'flex' }, mr: 1 }} />
                 </Toolbar>

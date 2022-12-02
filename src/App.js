@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className="App">
         <NavBar />
-        <div className="container my-5 d-flex justify-content-center">
+        <div className="container d-flex justify-content-center">
         </div>
         <Footer />
         <Routes>
