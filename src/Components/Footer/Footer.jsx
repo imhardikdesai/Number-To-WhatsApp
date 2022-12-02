@@ -6,7 +6,7 @@ import MessageIcon from '@mui/icons-material/Message';
 import DialpadIcon from '@mui/icons-material/Dialpad';
 import { Link } from 'react-router-dom'
 export default function Footer() {
-    const [value, setValue] = React.useState('/');
+    const [value, setValue] = React.useState('dialpad');
 
 
     const handleChange = (event, newValue) => {
@@ -15,29 +15,35 @@ export default function Footer() {
     };
 
     return (
-        <Link to={value}>
-            <BottomNavigation style={{ justifyContent: "space-around", position: "fixed", bottom: 0, marginBottom: "0.5rem", }} sx={{ width: '100%' }} value={value} onChange={handleChange}>
+        <BottomNavigation style={{ justifyContent: "space-around", position: "fixed", bottom: 0, marginBottom: "0.5rem", }} sx={{ width: '100%' }} value={value} onChange={handleChange}>
 
-                <BottomNavigationAction
-                    label="Dialpad"
-                    value="/"
-                    showlabels='false'
-                    icon={<DialpadIcon />}
-                />
+            <BottomNavigationAction
+                component={Link}
+                to="/"
+                label="Dialpad"
+                value="dialpad"
+                showlabels='false'
+                icon={<DialpadIcon />}
+            />
 
-                <BottomNavigationAction
-                    label="Send Message"
-                    value="/sendtext"
-                    showlabels='false'
-                    icon={<MessageIcon />}
-                />
-                <BottomNavigationAction
-                    label="Owner"
-                    value="/about"
-                    showlabels='false'
-                    icon={<AccountCircleIcon />} />
-            </BottomNavigation>
-        </Link>
+            <BottomNavigationAction
+                component={Link}
+                to="/sendtext"
+                label="Send Message"
+                value="message"
+                showlabels='false'
+                icon={<MessageIcon />}
+            />
+            <BottomNavigationAction
+                component={Link}
+                to="/about"
+                label="Owner"
+                value="about"
+                showlabels='false'
+                icon={<AccountCircleIcon />} />
+
+        </BottomNavigation>
+
 
     );
 }
