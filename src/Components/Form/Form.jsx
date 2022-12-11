@@ -9,7 +9,6 @@ import { useState } from 'react';
 export default function Form() {
     const [number, setNumber] = useState(0);
 
-
     return (
         <>
             <div className="formData">
